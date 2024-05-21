@@ -1,6 +1,7 @@
 package emaillist.dao;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
@@ -34,8 +35,11 @@ public class EmailListDaoTest {
 		vo.setEmail("dooly@gmail.com");
 		
 		boolean result = new EmaillistDao().insert(vo);		
-		//assertEquals(5, j); // (expect, real value)
 		assertTrue(result);
+		//assertEquals(5, j); // (expect, real value)
+		
+		//new EmaillistDao().insert(vo);
+		//assertNotNull(vo.getNo());
 	}
 	
 	@Test
